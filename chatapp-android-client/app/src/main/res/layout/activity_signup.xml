@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/colorBackgroundPrimary">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="56dp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp">
+
+
+        <include layout="@layout/chatapp_header" />
+
+        <!-- Email Label -->
+        <!--<android.support.design.widget.TextInputLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="8dp"-->
+            <!--android:layout_marginBottom="8dp"-->
+            <!--android:textColorHint="#F5F5DC">-->
+            <!--<EditText android:id="@+id/input_email"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:inputType="textEmailAddress"-->
+                <!--android:hint="Email"-->
+                <!--android:textColor="#f5f5dc"-->
+                <!--android:textColorHint="#F5F5DC"/>-->
+        <!--</android.support.design.widget.TextInputLayout>-->
+
+        <EditText
+            android:id="@+id/input_email"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:background="#ffffff"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:textCursorDrawable="@null" />
+
+        <!-- Password Label -->
+        <!--<android.support.design.widget.TextInputLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="8dp"-->
+            <!--android:layout_marginBottom="8dp"-->
+            <!--android:textColorHint="#F5F5DC">-->
+            <!--<EditText android:id="@+id/input_password"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:inputType="textPassword"-->
+                <!--android:textColor="#f5f5dc"-->
+                <!--android:textColorHint="#f5f5dc"-->
+                <!--android:hint="Password"/>-->
+        <!--</android.support.design.widget.TextInputLayout>-->
+
+        <EditText
+            android:id="@+id/input_password"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:background="#ffffff"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textCursorDrawable="@null" />
+
+        <!-- username label -->
+        <!--<android.support.design.widget.TextInputLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="8dp"-->
+            <!--android:layout_marginBottom="8dp"-->
+            <!--android:textColorHint="#F5F5DC">-->
+            <!--<EditText android:id="@+id/input_username"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:inputType="text"-->
+                <!--android:hint="Username"-->
+                <!--android:textColorHint="#F5F5DC"-->
+                <!--android:textColor="#F5F5DC"/>-->
+        <!--</android.support.design.widget.TextInputLayout>-->
+
+        <EditText
+            android:id="@+id/input_username"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:background="#ffffff"
+            android:hint="Screen name"
+            android:inputType="text"
+            android:textCursorDrawable="@null" />
+
+        <!-- phone label -->
+        <!--<android.support.design.widget.TextInputLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="8dp"-->
+            <!--android:layout_marginBottom="8dp"-->
+            <!--android:textColorHint="#F5F5DC">-->
+            <!--<EditText android:id="@+id/input_phone"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:inputType="text"-->
+                <!--android:textColor="#F5F5DC"-->
+                <!--android:textColorHint="#F5F5DC"-->
+                <!--android:hint="Phone" />-->
+        <!--</android.support.design.widget.TextInputLayout>-->
+
+        <EditText
+            android:id="@+id/input_phone"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:background="#ffffff"
+            android:hint="Phone"
+            android:inputType="text"
+            android:textCursorDrawable="@null" />
+
+        <CheckBox
+            android:id="@+id/tc_checkbox_signup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Terms and Conditions"
+            android:textStyle="italic"
+            android:textColor="@android:color/white"
+            android:buttonTint="@android:color/white"
+            android:clickable="false"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Checkbox For enabling Two Factor Authentication -->
+        <CheckBox
+            android:id="@+id/receive_sms_signup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Receive sms text messages"
+            android:textColor="@android:color/white"
+            android:buttonTint="@android:color/white">
+        </CheckBox>
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_signin"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
+            android:padding="12dp"
+            android:text="Signup"
+            android:background="@drawable/button_border_v1"
+            android:textColor="@color/colorForegroundButtonPrimary"
+            android:onClick="signup" />
+
+        <TextView android:id="@+id/signin_link"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:text="Already registered. Click to Sign In"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:textSize="16dip"
+            android:onClick="gotoLogin" />
+
+    </LinearLayout>
+</ScrollView>

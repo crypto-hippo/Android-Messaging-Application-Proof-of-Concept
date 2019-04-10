@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/profile_activity_root"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/colorBackgroundPrimary">
+
+    <LinearLayout
+        android:id="@+id/profile_activity_linearlayout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="56dp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp">
+
+        <include layout="@layout/chatapp_header" />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:textSize="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBackgroundButtonPrimary"
+            android:text="INBOX"
+            android:layout_gravity="center" />
+
+        <RelativeLayout
+            android:id="@+id/inbox_relative_layout"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@color/colorBackgroundInbox">
+
+            <TextView
+                android:id="@+id/inbox_link"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="goInbox"
+                android:text="Inbox"
+                android:textColor="@color/colorInboxLink" />
+
+            <TextView
+                android:id="@+id/write_link"
+                android:onClick="goHome"
+                android:layout_below="@+id/inbox_link"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Write"
+                android:textColor="@color/colorInboxLink" />
+
+            <TextView
+                android:id="@+id/sent_link"
+                android:layout_below="@id/write_link"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="goSent"
+                android:text="Sent"
+                android:textColor="@color/colorInboxLink" />
+
+            <TextView
+                android:id="@+id/num_inbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:layout_alignParentRight="true" />
+
+            <TextView
+                android:id="@+id/num_write"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/num_inbox" />
+
+            <TextView
+                android:id="@+id/num_sent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/num_write" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+
+            <Button
+                android:id="@+id/home_btn"
+                android:layout_width="50dp"
+                android:layout_height="75dp"
+                android:text="Home"
+                android:onClick="goHome"
+                android:background="@drawable/button_border_v1"
+                android:textColor="@color/colorForegroundButtonPrimary"
+                android:layout_alignParentLeft="true"/>
+
+            <Button
+                android:id="@+id/signout_btn"
+                android:layout_width="50dp"
+                android:layout_height="75dp"
+                android:text="Sign out"
+                android:onClick="signout"
+                android:background="@drawable/button_border_v1"
+                android:textColor="@color/colorForegroundButtonPrimary"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+        <CheckBox
+            android:layout_marginTop="16dp"
+            android:id="@+id/check_sms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@android:color/white"
+            android:textSize="20dp"
+            android:text="Receive SMS Text messages"
+            android:textColor="#ffffff"
+            android:onClick="enableSms" />
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
+    <!--&lt;!&ndash; CoordinatorLayout is used to create scrolling and "floating" effects within a layout &ndash;&gt;-->
+<!--&lt;!&ndash; This is typically the root layout which wraps the app bar and content &ndash;&gt;-->
+<!--<android.support.design.widget.CoordinatorLayout-->
+    <!--android:orientation="horizontal"-->
+    <!--android:id="@+id/main_content"-->
+    <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent">-->
+
+    <!--&lt;!&ndash; AppBarLayout is a wrapper for a Toolbar in order to apply scrolling effects. &ndash;&gt;-->
+    <!--&lt;!&ndash; Note that AppBarLayout expects to be the first child nested within a CoordinatorLayout &ndash;&gt;-->
+    <!--<android.support.design.widget.AppBarLayout-->
+        <!--android:id="@+id/appBar"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:theme="@style/ThemeOverlay.AppCompat.ActionBar"-->
+        <!--android:background="#ffffff">-->
+
+        <!--<android.support.v7.widget.Toolbar-->
+            <!--android:id="@+id/toolbar"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="?attr/actionBarSize"-->
+            <!--android:background="?attr/colorPrimary" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/no_conversations_text"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:background="#ffffff"-->
+            <!--android:gravity="center_horizontal"-->
+            <!--android:text="You currently have no conversations. Click the button below to start a conversation"-->
+            <!--android:visibility="invisible" />-->
+
+    <!--</android.support.design.widget.AppBarLayout>-->
+
+    <!--<android.support.v4.widget.NestedScrollView-->
+        <!--android:id="@+id/scrollView"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--app:layout_behavior="@string/appbar_scrolling_view_behavior">-->
+
+        <!--<LinearLayout-->
+            <!--android:id="@+id/scrollview_linearlayout"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="vertical">-->
+
+
+        <!--</LinearLayout>-->
+
+    <!--</android.support.v4.widget.NestedScrollView>-->
+
+    <!--<android.support.design.widget.FloatingActionButton-->
+        <!--android:id="@+id/new_message_fab"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="bottom|end"-->
+        <!--android:layout_margin="@dimen/fab_margin"-->
+        <!--app:srcCompat="@android:drawable/ic_dialog_email" />-->
+
+<!--</android.support.design.widget.CoordinatorLayout>-->

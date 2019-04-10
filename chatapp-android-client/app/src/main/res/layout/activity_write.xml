@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/colorBackgroundPrimary"
+    tools:context="com.example.dylan.myapplication.WriteActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="56dp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp">
+
+        <include layout="@layout/chatapp_header" />
+
+        <AutoCompleteTextView
+            android:id="@+id/autocomplete_emailto"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:textCursorDrawable="@null"
+            android:background="@android:color/white"
+            android:hint="To" />
+        
+        <AutoCompleteTextView
+            android:id="@+id/autocomplete_codeTo"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:textCursorDrawable="@null"
+            android:background="@android:color/white"
+            android:hint="Code" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp">
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btn_write"
+                android:layout_width="50dp"
+                android:layout_height="75dp"
+                android:text="write"
+                android:onClick="startWrite"
+                android:textColor="@color/colorForegroundButtonPrimary"
+                android:background="@drawable/button_border_v1"
+                android:layout_alignParentRight="true" />
+
+            <Button
+                android:id="@+id/btn_inbox"
+                android:layout_width="50dp"
+                android:layout_height="75dp"
+                android:text="Inbox"
+                android:onClick="gotoProfile"
+                android:background="@drawable/button_border_v1"
+                android:textColor="@color/colorForegroundButtonPrimary"
+                android:layout_alignParentLeft="true" />
+        </RelativeLayout>
+
+        <!--<RelativeLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="15dp">-->
+
+            <!--<Button-->
+                <!--android:id="@+id/home_btn"-->
+                <!--android:layout_width="50dp"-->
+                <!--android:layout_height="75dp"-->
+                <!--android:text="Home"-->
+                <!--android:onClick="goHome"-->
+                <!--android:background="@drawable/button_border_v1"-->
+                <!--android:textColor="@color/colorForegroundButtonPrimary"-->
+                <!--android:layout_alignParentLeft="true"/>-->
+
+            <!--<Button-->
+                <!--android:id="@+id/signout_btn"-->
+                <!--android:layout_width="50dp"-->
+                <!--android:layout_height="75dp"-->
+                <!--android:text="Sign out"-->
+                <!--android:onClick="signout"-->
+                <!--android:background="@drawable/button_border_v1"-->
+                <!--android:textColor="@color/colorForegroundButtonPrimary"-->
+                <!--android:layout_alignParentRight="true"/>-->
+
+        <!--</RelativeLayout>-->
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

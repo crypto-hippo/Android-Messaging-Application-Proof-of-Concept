@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="notification_channel_id_1">notification_channel_id_1</string>
+    <string name="title_activity_compose_message">ComposeMessageActivity</string>
+
+</resources>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/colorBackgroundPrimary">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="56dp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp">
+
+        <include layout="@layout/chatapp_header" />
+
+        <CheckBox
+            android:id="@+id/tc_checkbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Terms and Conditions"
+            android:textStyle="italic"
+            android:textColor="@android:color/white"
+            android:buttonTint="@android:color/white"
+            android:onClick="acceptTC"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp" />
+
+        <include layout="@layout/tc_webview" />
+
+        <CheckBox
+            android:id="@+id/receiveSmsCheckbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Receive SMS Text messages"
+            android:textColor="@android:color/white"
+            android:buttonTint="@android:color/white"
+            android:onClick="receiveSms"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_accept"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:text="Accept"
+            android:background="@drawable/button_border_v1"
+            android:textColor="@color/colorForegroundButtonPrimary"
+            android:onClick="acceptAndContinue" />
+
+    </LinearLayout>
+</ScrollView>

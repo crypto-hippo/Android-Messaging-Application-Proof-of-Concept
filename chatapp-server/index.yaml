@@ -1,0 +1,14 @@
+indexes:
+
+- kind: Message
+  properties:
+  - name: receiver
+  - name: time_sent
+    direction: desc
+
+    
+- kind: Message
+  properties:
+  - name: sender_username
+  - name: time_sent
+    direction: desc

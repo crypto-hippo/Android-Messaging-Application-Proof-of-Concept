@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#ff4081</color>
+
+    <!-- Color background Primary-->
+    <color name="colorBackgroundPrimary">#0099ff</color>
+
+    <!-- Color background title for main activity -->
+    <color name="colorBackgroundTitlePrimary">#0066ff</color>
+
+    <!-- Color for title text for main activity -->
+    <color name="colorForegroundTitlePrimary">#ffffff</color>
+
+    <!-- Color for background of input boxes on main activity -->
+    <color name="colorBackgroundInputPrimary">#ffffff</color>
+
+    <!-- Color foreground of input boxes on main activity -->
+    <color name="colorForegoundInputPrimary">#000000</color>
+
+    <!-- Color background for buttons on main activity-->
+    <color name="colorBackgroundButtonPrimary">#ffff00</color>
+
+    <!-- Color foreground for buttons -->
+    <color name="colorForegroundButtonPrimary">#001a66</color>
+
+    <!-- Color background for inbox -->
+    <color name="colorBackgroundInbox">#ffffff</color>
+
+    <!-- Text color for links in inbox -->
+    <color name="colorInboxLink">#001a66</color>
+
+    <!-- Text color for pre defined message -->
+    <color name="colorDefinedMessageLink">#0099ff</color>
+
+    <!-- Text color for pre defined message when clicked -->
+    <color name="colorDefinedMessageLinkWhenClicked">#000033</color>
+
+    <!-- Text color for unread inbox messages -->
+    <color name="colorInboxMessageUnread">#0099ff</color>
+
+    <color name="colorInboxMessageRead">#000033</color>
+
+</resources>
